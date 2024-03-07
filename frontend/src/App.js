@@ -1,3 +1,5 @@
+/* eslint-disable react/jsx-filename-extension */
+/* eslint-disable import/extensions */
 /* eslint-disable react/function-component-definition */
 /* eslint-disable react/prop-types */
 import React from 'react';
@@ -9,14 +11,11 @@ import Login from './pages/login/Login';
 import NotFoundPage from './pages/notFoundPages';
 import Signup from './pages/Signup/Signup';
 
-// eslint-disable-next-line import/extensions
 import { useAuthContext } from './context/index.js';
 import MainProvider from './context/MainProvider';
 
-// eslint-disable-next-line react/function-component-definition
 const PrivateRoute = ({ children }) => {
   const authContext = useAuthContext();
-  // eslint-disable-next-line react/jsx-filename-extension
   return authContext.data ? children : <Navigate to="/login" />;
 };
 
