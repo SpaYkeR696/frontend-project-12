@@ -1,5 +1,3 @@
-/* eslint-disable react/function-component-definition */
-/* eslint-disable import/extensions */
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import Button from 'react-bootstrap/Button';

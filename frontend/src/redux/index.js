@@ -1,4 +1,3 @@
-/* eslint-disable import/extensions */
 import { configureStore } from '@reduxjs/toolkit';
 import channelsReducer from './slices/channelsSlice.js';
 import messagesReducer from './slices/messagesSlice.js';

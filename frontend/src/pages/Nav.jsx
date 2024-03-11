@@ -1,6 +1,3 @@
-/* eslint-disable react/function-component-definition */
-/* eslint-disable import/extensions */
-/* eslint-disable react/prop-types */
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import Button from 'react-bootstrap/Button';

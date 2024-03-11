@@ -1,6 +1,3 @@
-/* eslint-disable react/function-component-definition */
-/* eslint-disable react/prop-types */
-/* eslint-disable import/extensions */
 import React, { useState, useMemo } from 'react';
 import Context from './index.js';
 

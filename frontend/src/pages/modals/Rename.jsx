@@ -1,5 +1,3 @@
-/* eslint-disable react/function-component-definition */
-/* eslint-disable import/extensions */
 import React, { useEffect, useRef } from 'react';
 import { useFormik } from 'formik';
 import { useSelector, useDispatch } from 'react-redux';

@@ -1,6 +1,3 @@
-/* eslint-disable react/function-component-definition */
-/* eslint-disable import/extensions */
-/* eslint-disable react/prop-types */
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Dropdown } from 'react-bootstrap';

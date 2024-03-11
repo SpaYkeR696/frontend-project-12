@@ -1,4 +1,4 @@
-/* eslint-disable import/extensions */
+/* eslint-disable functional/no-expression-statements */
 import i18next from 'i18next';
 import resources from './resources/index.js';
 

@@ -1,5 +1,3 @@
-/* eslint-disable react/function-component-definition */
-/* eslint-disable import/extensions */
 import React from 'react';
 import axios from 'axios';
 import Form from 'react-bootstrap/Form';

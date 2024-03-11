@@ -1,5 +1,3 @@
-/* eslint-disable react/function-component-definition */
-/* eslint-disable import/extensions */
 import { Form, InputGroup, Button } from 'react-bootstrap';
 import React, { useState, useRef, useEffect } from 'react';
 import { useSelector } from 'react-redux';

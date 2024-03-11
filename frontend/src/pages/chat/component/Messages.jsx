@@ -1,4 +1,3 @@
-/* eslint-disable import/extensions */
 import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { messagesSelector } from '../../../redux/slices/messagesSlice.js';

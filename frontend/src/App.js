@@ -1,7 +1,3 @@
-/* eslint-disable react/jsx-filename-extension */
-/* eslint-disable import/extensions */
-/* eslint-disable react/function-component-definition */
-/* eslint-disable react/prop-types */
 import React from 'react';
 import {
   BrowserRouter, Navigate, Route, Routes,

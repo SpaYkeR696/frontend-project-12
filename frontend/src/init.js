@@ -1,4 +1,3 @@
-/* eslint-disable import/extensions */
 import { io } from 'socket.io-client';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
@@ -72,7 +71,6 @@ const runApp = () => {
 
   const rollbarConfig = {
     enabled: true,
-    // eslint-disable-next-line no-undef
     accessToken: process.env.REACT_APP_ROLLBAR_ACCESS_TOKEN,
     captureUncaught: true,
     captureUnhandledRejections: true,
@@ -80,7 +78,6 @@ const runApp = () => {
 
   const root = ReactDOM.createRoot(document.getElementById('chat'));
   root.render(
-    // eslint-disable-next-line react/jsx-filename-extension
     <Provider store={store}>
       <RollbarProvider config={rollbarConfig}>
         <ErrorBoundary>

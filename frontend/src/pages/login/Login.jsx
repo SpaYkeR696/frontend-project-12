@@ -1,5 +1,3 @@
-/* eslint-disable react/function-component-definition */
-/* eslint-disable import/extensions */
 import React, { useRef, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import Form from 'react-bootstrap/Form';
