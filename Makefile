@@ -12,3 +12,6 @@ build:
 
 lint:
 	make -C frontend lint
+	
+install:
+    npm ci --legacy-peer-deps
