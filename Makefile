@@ -5,7 +5,10 @@ start-backend:
 	npx start-server
 
 start:
-	make start-backend & make start-frontend
+	npm run start
+
+build:
+	npm run build
 
 lint:
 	make -C frontend lint
