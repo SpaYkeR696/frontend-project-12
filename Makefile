@@ -8,6 +8,9 @@ start:
 	npm run start
 
 build:
+  npm run build --prefix frontend
+
+build:
 	npm run build
 
 lint:
