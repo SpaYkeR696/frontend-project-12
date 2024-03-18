@@ -6,7 +6,6 @@
 
 ### Installation Guide:
 
-
 * ```$ git clone: https://github.com/SpaYkeR696/frontend-project-12.git```
 * ```$ make install```
 * ```$ make start``` - run the frontend & backend
