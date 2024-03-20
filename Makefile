@@ -12,3 +12,6 @@ lint:
 
 install:
 	make -C frontend install
+	
+build:
+	npm run build
