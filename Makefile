@@ -1,15 +1,14 @@
-install:
-    npm ci --legacy-peer-deps
-
-start:
-    npm start
-
-build:
-    rm build -rf
-    npm run build
-
 start-frontend:
-    npx react-scripts start -timeout=1000
+	make -C frontend start
 
 start-backend:
-    npx start-server -p 5001
+	npx start-server
+
+start:
+	make start-backend & make start-frontend
+
+lint:
+	make -C frontend lint
+
+install:
+	make -C frontend install
