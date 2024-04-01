@@ -1,17 +1,18 @@
 start-frontend:
-	make -C frontend start
+    make -C frontend start
 
 start-backend:
-	npx start-server
+    npx start-server
 
 lint:
-	make -C frontend lint
+    make -C frontend lint
 
 install:
-	make -C frontend install
-	
+    make -C frontend install
+    
 build:
-	npm run build
+    npm run build
 
 start:
     npm run start
+	
