@@ -1,3 +1,4 @@
+/* eslint-disable functional/no-expression-statements */
 /* eslint-disable import/extensions */
 import { createSlice } from '@reduxjs/toolkit';
 import fetchAuthorizationData from '../thunk.js';

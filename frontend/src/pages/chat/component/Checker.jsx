@@ -1,3 +1,4 @@
+/* eslint-disable functional/no-expression-statements */
 import React, { useEffect, useCallback } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';

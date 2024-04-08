@@ -1,3 +1,4 @@
+/* eslint-disable functional/no-expression-statements */
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Dropdown } from 'react-bootstrap';

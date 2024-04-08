@@ -1,3 +1,4 @@
+/* eslint-disable functional/no-expression-statements */
 import React from 'react';
 import axios from 'axios';
 import Form from 'react-bootstrap/Form';

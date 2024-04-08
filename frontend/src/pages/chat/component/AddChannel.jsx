@@ -1,3 +1,4 @@
+/* eslint-disable functional/no-expression-statements */
 import React from 'react';
 import Button from 'react-bootstrap/Button';
 import { useDispatch } from 'react-redux';

@@ -1,3 +1,4 @@
+/* eslint-disable functional/no-expression-statements */
 import { Form, InputGroup, Button } from 'react-bootstrap';
 import React, { useState, useRef, useEffect } from 'react';
 import { useSelector } from 'react-redux';
