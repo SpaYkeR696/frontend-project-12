@@ -44,6 +44,7 @@ const Chat = () => {
             <div className="d-flex flex-column h-100">
               <ChatInfo />
               <div id="messages-box" className="chat-messages overflow-auto px-5 ">
+                <LanguageSwitcher />
                 <Messages />
               </div>
               <div className="mt-auto px-5 py-3">
