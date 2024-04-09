@@ -31,12 +31,12 @@ const Channels = () => {
             {channel.name}
           </Button>
 
-          {/* {channel.removable
+          {channel.removable
         && (
         <Dropdown.Toggle className="br-0" split variant="light" id="dropdown-split-basic">
           <span className="visually-hidden">Управление каналом</span>
         </Dropdown.Toggle>
-        )} */}
+        )}
 
           <Dropdown.Menu>
             <DeleteChannel id={channel.id} />
