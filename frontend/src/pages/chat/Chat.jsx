@@ -9,7 +9,7 @@ import Messages from './component/Messages.jsx';
 import AddChannel from './component/AddChannel';
 import getModal from '../modals/index.js';
 import { modalSelector } from '../../redux/slices/modalSlice';
-import LanguageSwitcher from '../LanguageSwitcher.jsx';
+
 import Nav from '../Nav';
 
 const renderModal = (modal) => {
@@ -28,7 +28,6 @@ const Chat = () => {
   return (
     <>
       <Nav button />
-      <LanguageSwitcher />
       <div className="container h-100 my-4 overflow-hidden rounded shadow">
         <div className="row h-100 bg-white flex-md-row">
           <div className="col-4 col-md-2 border-end pt-5 px-0 bg-light">
@@ -44,7 +43,6 @@ const Chat = () => {
             <div className="d-flex flex-column h-100">
               <ChatInfo />
               <div id="messages-box" className="chat-messages overflow-auto px-5 ">
-                <LanguageSwitcher />
                 <Messages />
               </div>
               <div className="mt-auto px-5 py-3">
