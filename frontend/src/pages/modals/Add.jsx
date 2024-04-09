@@ -31,7 +31,6 @@ const Add = () => {
     onSubmit: ({ channelName }, actions) => {
       const resolve = () => {
         formik.resetForm();
-        filter.clean(channelName);
         toastSuccess(t('toasts.add'));
         dispatch(closeModal());
       };
@@ -41,7 +40,8 @@ const Add = () => {
         return;
       }
 
-      addNewChannel({ name: channelName }, resolve);
+      const filterName = filter.clean(channelName);
+      addNewChannel({ name: filterName }, resolve);
     },
   });
 
