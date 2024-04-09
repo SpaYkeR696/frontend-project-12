@@ -24,7 +24,7 @@ const Channels = () => {
             className="w-100 rounded-0 text-start text-truncate"
             variant="secondary"
             id={channel.id}
-            active={currentChannelId || channel.id}
+            active={currentChannelId !== channel.id}
             onClick={handleActiveChannel}
           >
             <span className="me-1">#</span>
