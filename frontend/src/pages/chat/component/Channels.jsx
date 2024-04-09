@@ -22,7 +22,7 @@ const Channels = () => {
         <Dropdown className="w-100" as={ButtonGroup}>
           <Button
             className="w-100 rounded-0 text-start text-truncate"
-            // variant="light"
+            variant="secondary"
             id={channel.id}
             active={null}
             onClick={handleActiveChannel}
