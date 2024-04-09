@@ -2,13 +2,13 @@ import React from 'react';
 import { Button, ButtonGroup } from 'react-bootstrap';
 import { useSelector, useDispatch } from 'react-redux';
 import Dropdown from 'react-bootstrap/Dropdown';
-import { changeChannel, channelsSelector } from '../../../redux/slices/channelsSlice.js';
+import { changeChannel, channelsSelector, channelIdSelector } from '../../../redux/slices/channelsSlice.js';
 import DeleteChannel from './DeletedChannel.jsx';
 import RenameChannel from './RenameChannel.jsx';
 
 const Channels = () => {
   const channels = useSelector(channelsSelector);
-  // const currentChannelId = useSelector(channelIdSelector);
+  const currentChannelId = useSelector(channelIdSelector);
   const dispatch = useDispatch();
 
   const handleActiveChannel = (e) => {
@@ -24,7 +24,7 @@ const Channels = () => {
             className="w-100 rounded-0 text-start text-truncate"
             variant="secondary"
             id={channel.id}
-            active={null}
+            active={currentChannelId === channel.id}
             onClick={handleActiveChannel}
           >
             <span className="me-1">#</span>
