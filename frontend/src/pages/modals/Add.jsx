@@ -82,7 +82,7 @@ const Add = () => {
           <Alert show={!!formik.errors.channelName} variant="danger">{formik.errors.channelName && t(`errors.${formik.errors.channelName}`)}</Alert>
         </Modal.Body>
         <Modal.Footer>
-          <Button type="button" variant="primary" disabled={formik.isSubmitting} onClick={close}>
+          <Button type="button" variant="secondary" disabled={formik.isSubmitting} onClick={close}>
             {t('buttons.cancel')}
           </Button>
           <Button type="submit" variant="secondary" disabled={!formik.isValid || formik.isSubmitting}>
