@@ -1,4 +1,3 @@
-/* eslint-disable functional/no-expression-statements */
 import React, { useRef, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import Form from 'react-bootstrap/Form';
@@ -31,7 +30,7 @@ const Login = () => {
     },
     onSubmit: async ({ username, password }, actions) => {
       try {
-        const { data } = await axios.post('/api/v1/login', {
+        const { data } = await axios.post('/v1/login', {
           username,
           password,
         });

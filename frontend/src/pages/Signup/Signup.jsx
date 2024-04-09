@@ -1,4 +1,3 @@
-/* eslint-disable functional/no-expression-statements */
 import React from 'react';
 import axios from 'axios';
 import Form from 'react-bootstrap/Form';
@@ -30,7 +29,7 @@ const Signup = () => {
     validationSchema: registartionSchema,
     onSubmit: async ({ username, password }, actions) => {
       try {
-        const { data } = await axios.post('/api/v1/signup', { username, password });
+        const { data } = await axios.post('/v1/signup', { username, password });
 
         if (data.token) {
           const user = { token: data.token, username: data.username };

@@ -1,4 +1,3 @@
-/* eslint-disable functional/no-expression-statements */
 import { io } from 'socket.io-client';
 import React from 'react';
 import ReactDOM from 'react-dom/client';

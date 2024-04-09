@@ -4,7 +4,6 @@ env:
 extends:
   - airbnb
   - plugin:react/recommended
-  - plugin:functional/recommended
   - plugin:react-hooks/recommended
 parserOptions:
   ecmaFeatures:
@@ -13,7 +12,6 @@ parserOptions:
   sourceType: module
 plugins:
   - react
-  - functional
 rules:
   functional/no-return-void: 0
   functional/no-conditional-statements: 0
