@@ -35,7 +35,7 @@ const Add = () => {
         dispatch(closeModal());
       };
 
-      if (isExistsChannelName(channels, filter.check(channelName))) {
+      if (isExistsChannelName(channels, filter.clean(channelName))) {
         actions.setFieldError('channelName', 'uniq');
         return;
       }
