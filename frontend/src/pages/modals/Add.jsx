@@ -50,14 +50,12 @@ const Add = () => {
     formik.resetForm();
     dispatch(closeModal());
   };
-
+  useEffect(() => { setTimeout(() => input.current.focus(), 1); }, []);
   useEffect(() => {
     if (formik.isSubmitting) {
       const toggle = unlockElementWithDelay(formik.setSubmitting, 3000);
       toggle(false);
     }
-
-    setTimeout(() => input.current.focus(), 1);
   }, [formik.isSubmitting, formik.setSubmitting]);
 
   return (
