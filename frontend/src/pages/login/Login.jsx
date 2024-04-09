@@ -30,7 +30,7 @@ const Login = () => {
     },
     onSubmit: async ({ username, password }, actions) => {
       try {
-        const { data } = await axios.post('/v1/login', {
+        const { data } = await axios.post('api/v1/login', {
           username,
           password,
         });
