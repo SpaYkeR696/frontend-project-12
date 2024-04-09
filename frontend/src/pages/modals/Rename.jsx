@@ -38,7 +38,7 @@ const Rename = () => {
         dispatch(closeModal());
       };
 
-      if (isExistsChannelName(channels, channelName) || leoProfanity.check(channelName)) {
+      if (isExistsChannelName(channels, channelName) || leoProfanity.clear(channelName)) {
         actions.setFieldError('channelName', 'uniq');
         return;
       }
