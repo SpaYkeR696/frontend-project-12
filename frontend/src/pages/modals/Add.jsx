@@ -6,6 +6,7 @@ import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
 import Alert from 'react-bootstrap/Alert';
 import { useTranslation } from 'react-i18next';
+import filter from 'leo-profanity';
 import { useSocketContext } from '../../context/index.js';
 import { channelSchema } from '../../schemas/index.js';
 import isExistsChannelName from '../../utils/isExistsChannelName.js';
@@ -34,7 +35,7 @@ const Add = () => {
         dispatch(closeModal());
       };
 
-      if (isExistsChannelName(channels, channelName)) {
+      if (isExistsChannelName(channels, channelName) || filter.check(channelName)) {
         actions.setFieldError('channelName', 'uniq');
         return;
       }
