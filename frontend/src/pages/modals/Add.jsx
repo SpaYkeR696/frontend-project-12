@@ -6,7 +6,6 @@ import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
 import Alert from 'react-bootstrap/Alert';
 import { useTranslation } from 'react-i18next';
-import filter from 'leo-profanity';
 import { useSocketContext } from '../../context/index.js';
 import { channelSchema } from '../../schemas/index.js';
 import isExistsChannelName from '../../utils/isExistsChannelName.js';
@@ -14,6 +13,7 @@ import unlockElementWithDelay from '../../utils/unlockElementWithDelay.js';
 import { channelsSelector } from '../../redux/slices/channelsSlice.js';
 import { modalSelector, closeModal } from '../../redux/slices/modalSlice.js';
 import toastSuccess from '../toasts/index.js';
+import filter from 'leo-profanity';
 
 const Add = () => {
   const { t } = useTranslation();
@@ -31,11 +31,12 @@ const Add = () => {
     onSubmit: ({ channelName }, actions) => {
       const resolve = () => {
         formik.resetForm();
+        filter.clean(channelName);
         toastSuccess(t('toasts.add'));
         dispatch(closeModal());
       };
 
-      if (isExistsChannelName(channels, filter.clean(channelName))) {
+      if (isExistsChannelName(channels, channelName)) {
         actions.setFieldError('channelName', 'uniq');
         return;
       }
