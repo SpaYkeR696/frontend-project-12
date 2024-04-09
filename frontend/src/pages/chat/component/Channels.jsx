@@ -21,7 +21,7 @@ const Channels = () => {
       <li className="nav-item w-100" key={index}>
         <Dropdown className="w-100" as={ButtonGroup}>
           <Button
-            className="w-100 br-0 btn-channel text-truncate text-start"
+            className="w-100 rounded-0 text-start text-truncate btn btn-secondary"
             variant="light"
             id={channel.id}
             active={currentChannelId === channel.id}
