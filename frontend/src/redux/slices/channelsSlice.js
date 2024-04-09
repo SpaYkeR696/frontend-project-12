@@ -12,7 +12,10 @@ const channelsSlice = createSlice({
     },
     addChannel: (state, { payload }) => {
       state.channels.push(payload);
-      state.currentChannelId = payload.id;
+      const user = localStorage.getItem('user');
+      if (payload.creator === user.username) {
+        state.currentChannelId = payload.id;
+      }
     },
     deleteChannel: (state, { payload }) => {
       const index = state.channels.findIndex(({ id }) => id === payload.id);

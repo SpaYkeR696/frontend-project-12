@@ -7,7 +7,7 @@ import Modal from 'react-bootstrap/Modal';
 import Alert from 'react-bootstrap/Alert';
 import { useTranslation } from 'react-i18next';
 import filter from 'leo-profanity';
-import { useSocketContext } from '../../context/index.js';
+import { useAuthContext, useSocketContext } from '../../context/index.js';
 import { channelSchema } from '../../schemas/index.js';
 import isExistsChannelName from '../../utils/isExistsChannelName.js';
 import unlockElementWithDelay from '../../utils/unlockElementWithDelay.js';
@@ -23,6 +23,8 @@ const Add = () => {
   const dispatch = useDispatch();
   const input = useRef();
 
+  const useAuth = useAuthContext();
+  const user = useAuth.data;
   const formik = useFormik({
     initialValues: {
       channelName: '',
@@ -34,14 +36,13 @@ const Add = () => {
         toastSuccess(t('toasts.add'));
         dispatch(closeModal());
       };
-
-      if (isExistsChannelName(channels, channelName)) {
+      const filterName = filter.clean(channelName);
+      if (isExistsChannelName(channels, filterName)) {
         actions.setFieldError('channelName', 'uniq');
         return;
       }
 
-      const filterName = filter.clean(channelName);
-      addNewChannel({ name: filterName }, resolve);
+      addNewChannel({ name: filterName, creator: user.username }, resolve);
     },
   });
 
