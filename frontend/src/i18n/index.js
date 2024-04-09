@@ -1,11 +1,11 @@
 import i18next from 'i18next';
-import resources from './resources/index.js';
+import ru from './resources/ru.js';
 
 const i18Instance = i18next.createInstance();
 i18Instance.init({
   lng: 'ru',
   debug: false,
-  resources,
+  ru,
 });
 
 export default i18Instance;
