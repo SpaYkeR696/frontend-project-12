@@ -6,6 +6,7 @@ import Modal from 'react-bootstrap/Modal';
 import Form from 'react-bootstrap/Form';
 import Alert from 'react-bootstrap/Alert';
 import { useTranslation } from 'react-i18next';
+import LeoProfanity from 'leo-profanity';
 import { channelSchema } from '../../schemas/index.js';
 import { useSocketContext } from '../../context/index.js';
 import isExistsChannelName from '../../utils/isExistsChannelName.js';
@@ -23,6 +24,8 @@ const Rename = () => {
   const dispatch = useDispatch();
   const input = useRef();
 
+  const leoProfanity = new LeoProfanity();
+
   const formik = useFormik({
     initialValues: {
       channelName: '',
@@ -35,7 +38,7 @@ const Rename = () => {
         dispatch(closeModal());
       };
 
-      if (isExistsChannelName(channels, channelName)) {
+      if (isExistsChannelName(channels, channelName) || leoProfanity.check(channelName)) {
         actions.setFieldError('channelName', 'uniq');
         return;
       }
