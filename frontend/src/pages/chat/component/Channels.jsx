@@ -21,7 +21,7 @@ const Channels = () => {
       <li className="nav-item w-100" key={index}>
         <Dropdown className="w-100" as={ButtonGroup}>
           <Button
-            className="w-100 rounded-0 text-start text-truncate btn btn-secondary"
+            className="w-100 rounded-0 btn-channel text-start text-truncate "
             variant="light"
             id={channel.id}
             active={currentChannelId === channel.id}
@@ -31,12 +31,12 @@ const Channels = () => {
             {channel.name}
           </Button>
 
-          {channel.removable
+          {/* {channel.removable
         && (
         <Dropdown.Toggle className="br-0" split variant="light" id="dropdown-split-basic">
           <span className="visually-hidden">Управление каналом</span>
         </Dropdown.Toggle>
-        )}
+        )} */}
 
           <Dropdown.Menu>
             <DeleteChannel id={channel.id} />
