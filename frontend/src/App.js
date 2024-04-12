@@ -15,18 +15,13 @@ const PrivateRoute = ({ children }) => {
   return authContext.data ? children : <Navigate to="/login" />;
 };
 
-const AuthRoute = ({ children }) => {
-  const authContext = useAuthContext();
-  return authContext.data ? <Navigate to="/" /> : children;
-};
-
 const App = () => (
   <MainProvider>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={(<PrivateRoute><Checker /></PrivateRoute>)} />
-        <Route path="/login" element={<AuthRoute><Login /></AuthRoute>} />
-        <Route path="/signup" element={<AuthRoute><Signup /></AuthRoute>} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </BrowserRouter>
