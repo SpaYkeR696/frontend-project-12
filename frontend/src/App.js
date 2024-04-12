@@ -3,9 +3,9 @@ import {
   BrowserRouter, Navigate, Route, Routes,
 } from 'react-router-dom';
 import Checker from './pages/chat/component/Checker';
-import Login from './pages/login/Login';
+import Login from './context/Login.jsx';
 import NotFoundPage from './pages/notFoundPages';
-import Signup from './pages/Signup/Signup';
+import Signup from './context/Signup.jsx';
 
 import { useAuthContext } from './context/index.js';
 import MainProvider from './context/MainProvider';

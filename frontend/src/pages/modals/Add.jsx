@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 import { useFormik } from 'formik';
 import { useSelector, useDispatch } from 'react-redux';
 import Button from 'react-bootstrap/Button';
@@ -10,7 +10,6 @@ import filter from 'leo-profanity';
 import { useAuthContext, useSocketContext } from '../../context/index.js';
 import { channelSchema } from '../../schemas/index.js';
 import isExistsChannelName from '../../utils/isExistsChannelName.js';
-import unlockElementWithDelay from '../../utils/unlockElementWithDelay.js';
 import { channelsSelector } from '../../redux/slices/channelsSlice.js';
 import { modalSelector, closeModal } from '../../redux/slices/modalSlice.js';
 import toastSuccess from '../toasts/index.js';
@@ -50,13 +49,6 @@ const Add = () => {
     formik.resetForm();
     dispatch(closeModal());
   };
-  useEffect(() => { setTimeout(() => input.current.focus(), 1); }, []);
-  useEffect(() => {
-    if (formik.isSubmitting) {
-      const toggle = unlockElementWithDelay(formik.setSubmitting, 3000);
-      toggle(false);
-    }
-  }, [formik.isSubmitting, formik.setSubmitting]);
 
   return (
     <Modal show={isShowing} onHide={close} centered>

@@ -9,10 +9,10 @@ import axios from 'axios';
 import { useTranslation } from 'react-i18next';
 import { useRollbar } from '@rollbar/react';
 import { ToastContainer } from 'react-toastify';
-import { toastError } from '../toasts/index.js';
-import { useAuthContext } from '../../context/index.js';
+import { toastError } from '../pages/toasts/index.js';
+import { useAuthContext } from './index.js';
 
-import Nav from '../Nav';
+import Nav from '../pages/Nav.jsx';
 
 const Login = () => {
   const rollbar = useRollbar();
